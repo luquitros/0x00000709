@@ -1,2 +1,2 @@
 # 0x00000709
-0x00000709 printer fix
+script .bat que automatiza todas as configurações de RPC para impressoras compartilhadas
