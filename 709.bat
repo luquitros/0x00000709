@@ -115,9 +115,7 @@ if errorlevel 1 (
     echo [OK]     Regra de firewall "Print-RPC 601" ja existe
 )
 
-:: -----------------------------------------------
-:: 9. Regra de Firewall porta 135
-:: -----------------------------------------------
+
 netsh advfirewall firewall show rule name="Print-RPC Endpoint Mapper" >nul 2>&1
 if errorlevel 1 (
     echo [APLICANDO] Adicionando regra de firewall: Print-RPC Endpoint Mapper...
@@ -129,9 +127,7 @@ if errorlevel 1 (
 
 echo.
 
-:: -----------------------------------------------
-:: Reiniciar Spooler apenas se algo foi alterado
-:: -----------------------------------------------
+
 if "%CHANGED%"=="1" (
     echo [INFO] Alteracoes detectadas. Reiniciando Spooler...
     net stop spooler >nul 2>&1
